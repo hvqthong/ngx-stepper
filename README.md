@@ -4,8 +4,12 @@ Angular Steppers directive for Angular Material
 
 Based on Material Steppers: https://www.google.com/design/spec/components/steppers.html#steppers-types-of-steppers
 
+## Plunker Demo
+
+[http://embed.plnkr.co/n1Ye3pQY6dlMSoJizO6Y/](http://embed.plnkr.co/n1Ye3pQY6dlMSoJizO6Y/)
+
 ## Run Demo App
-You can try out the Datepicker in the demo app built with [Angular-CLI](https://github.com/angular/angular-cli). 
+You can try out the Angular Steppers in the demo app built with [Angular-CLI](https://github.com/angular/angular-cli). 
 
 ### #1 To start the demo app clone or download the repo.
 ### #2 Install the latest version of Angular-CLI
