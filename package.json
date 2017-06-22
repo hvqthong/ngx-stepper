@@ -1,6 +1,6 @@
 {
   "name": "ngx-stepper",
-  "version": "1.0.0",
+  "version": "1.0.8",
   "description": "Angular Steppers directive for Angular Material",
   "keywords": [
     "angular2",
@@ -12,12 +12,12 @@
     "type": "git",
     "url": "git+https://github.com/KeitaElric/ngx-stepper.git"
   },
-  "author": "Eduardo Eidelwein Berlitz <eberlitz@gmail.com>",
+  "author": "Thong Huynh <hvqthong.pns@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/eberlitz/material-steppers/issues"
+    "url": "https://github.com/KeitaElric/ngx-stepper/issues"
   },
-  "homepage": "https://github.com/eberlitz/material-steppers#readme",
+  "homepage": "https://github.com/KeitaElric/ngx-stepper#readme",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "typings": "./dist/index.d.ts",

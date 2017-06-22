@@ -18,7 +18,7 @@ import {
 } from '../ngx-stepper';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app',
   templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
