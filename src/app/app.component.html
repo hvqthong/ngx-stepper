@@ -1,0 +1,92 @@
+<div class="toggle-options">
+  <button md-button class="md-primary md-raised-button" (click)="toggleMobileStepText()">Toggle MobileStepText</button>
+  <button md-button class="md-primary md-raised" (click)="toggleVertical()">Toggle Vertical</button>
+  <button md-button class="md-primary md-raised" (click)="toggleLinear()">Toggle Linear</button>
+  <button md-button class="md-primary md-raised" (click)="toggleAlternative()">Toggle Alternative</button>
+  <button md-button class="md-primary md-raised" (click)="showError()">Show error</button>
+  <button md-button class="md-primary md-raised" (click)="clearError()">Clear error</button>
+  <button md-button class="md-primary md-raised" (click)="showFeedback()">Show Feedback</button>
+  <button md-button class="md-primary md-raised" (click)="clearFeedback()">Clear Feedback</button>
+</div>
+<ngx-stepper #stepperDemo [options]="options">
+  <ngx-step [label]="'Select a campaign'">
+    <ngx-step-body>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
+        sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime
+        voluptatibus, eaque autem!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
+        sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime
+        voluptatibus, eaque autem!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
+        sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime
+        voluptatibus, eaque autem!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
+        sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime
+        voluptatibus, eaque autem!</p>
+    </ngx-step-body>
+    <ngx-step-actions>
+      <button md-button class="md-primary md-raised" (click)="selectCampaign()">Continue</button>
+      <button md-button class="md-primary" (click)="cancel()">Cancel</button>
+    </ngx-step-actions>
+  </ngx-step>
+  <ngx-step [label]="'Create an group'">
+    <ngx-step-body>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
+        sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime
+        voluptatibus, eaque autem!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
+        sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime
+        voluptatibus, eaque autem!</p>
+    </ngx-step-body>
+    <ngx-step-actions>
+      <button md-button class="md-primary md-raised" (click)="nextStep()">Continue</button>
+      <button md-button class="md-primary" (click)="previousStep()">Back</button>
+    </ngx-step-actions>
+  </ngx-step>
+  <ngx-step [label]="'Create an ad'">
+    <ngx-step-body>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
+        sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime
+        voluptatibus, eaque autem!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
+        sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime
+        voluptatibus, eaque autem!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
+        sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime
+        voluptatibus, eaque autem!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
+        sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime
+        voluptatibus, eaque autem!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
+        sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime
+        voluptatibus, eaque autem!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
+        sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime
+        voluptatibus, eaque autem!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
+        sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime
+        voluptatibus, eaque autem!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
+        sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime
+        voluptatibus, eaque autem!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
+        sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime
+        voluptatibus, eaque autem!</p>
+    </ngx-step-body>
+    <ngx-step-actions>
+      <button md-button class="md-primary md-raised" (click)="nextStep()">Continue</button>
+      <button md-button class="md-primary" (click)="previousStep()">Back</button>
+    </ngx-step-actions>
+  </ngx-step>
+  <ngx-step [label]="'Publish the ad'">
+    <ngx-step-body>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
+        sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime
+        voluptatibus, eaque autem!</p>
+    </ngx-step-body>
+    <ngx-step-actions>
+      <button md-button class="md-primary md-raised" (click)="nextStep()">Complete</button>
+      <button md-button class="md-primary" (click)="previousStep()">Back</button>
+    </ngx-step-actions>
+  </ngx-step>
+</ngx-stepper>
