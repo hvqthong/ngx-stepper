@@ -8,7 +8,7 @@
   <button md-button class="md-primary md-raised" (click)="showFeedback()">Show Feedback</button>
   <button md-button class="md-primary md-raised" (click)="clearFeedback()">Clear Feedback</button>
 </div>
-<ngx-stepper #stepperDemo [options]="options">
+<ngx-stepper #stepperDemo="stepper" [options]="options">
   <ngx-step [label]="'Select a campaign'">
     <ngx-step-body>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
@@ -26,7 +26,7 @@
     </ngx-step-body>
     <ngx-step-actions>
       <button md-button class="md-primary md-raised" (click)="selectCampaign()">Continue</button>
-      <button md-button class="md-primary" (click)="cancel()">Cancel</button>
+      <button md-button class="md-primary" (click)="stepperDemo.back()">Cancel</button>
     </ngx-step-actions>
   </ngx-step>
   <ngx-step [label]="'Create an group'">
@@ -39,8 +39,8 @@
         voluptatibus, eaque autem!</p>
     </ngx-step-body>
     <ngx-step-actions>
-      <button md-button class="md-primary md-raised" (click)="nextStep()">Continue</button>
-      <button md-button class="md-primary" (click)="previousStep()">Back</button>
+      <button md-button class="md-primary md-raised" (click)="stepperDemo.next()">Continue</button>
+      <button md-button class="md-primary" (click)="stepperDemo.back()">Back</button>
     </ngx-step-actions>
   </ngx-step>
   <ngx-step [label]="'Create an ad'">
@@ -74,8 +74,8 @@
         voluptatibus, eaque autem!</p>
     </ngx-step-body>
     <ngx-step-actions>
-      <button md-button class="md-primary md-raised" (click)="nextStep()">Continue</button>
-      <button md-button class="md-primary" (click)="previousStep()">Back</button>
+      <button md-button class="md-primary md-raised" (click)="stepperDemo.next()">Continue</button>
+      <button md-button class="md-primary" (click)="stepperDemo.back()">Back</button>
     </ngx-step-actions>
   </ngx-step>
   <ngx-step [label]="'Publish the ad'">
@@ -85,8 +85,8 @@
         voluptatibus, eaque autem!</p>
     </ngx-step-body>
     <ngx-step-actions>
-      <button md-button class="md-primary md-raised" (click)="nextStep()">Complete</button>
-      <button md-button class="md-primary" (click)="previousStep()">Back</button>
+      <button md-button class="md-primary md-raised" (click)="stepperDemo.next()">Complete</button>
+      <button md-button class="md-primary" (click)="stepperDemo.back()">Back</button>
     </ngx-step-actions>
   </ngx-step>
 </ngx-stepper>

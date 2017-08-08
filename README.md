@@ -57,7 +57,7 @@ export class AppModule { }
 ### Write your html
 
 ```html      
-<ngx-stepper #stepperDemo [options]="options">
+<ngx-stepper #stepperDemo="stepper" [options]="options">
   <ngx-step [label]="'Select a campaign'">
     <ngx-step-body>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
@@ -75,7 +75,7 @@ export class AppModule { }
     </ngx-step-body>
     <ngx-step-actions>
       <button md-button class="md-primary md-raised" (click)="selectCampaign()">Continue</button>
-      <button md-button class="md-primary" (click)="cancel()">Cancel</button>
+      <button md-button class="md-primary" (click)="stepper.back()">Cancel</button>
     </ngx-step-actions>
   </ngx-step>
   <ngx-step [label]="'Publish the ad'">
@@ -85,8 +85,8 @@ export class AppModule { }
         voluptatibus, eaque autem!</p>
     </ngx-step-body>
     <ngx-step-actions>
-      <button md-button class="md-primary md-raised" (click)="nextStep()">Complete</button>
-      <button md-button class="md-primary" (click)="previousStep()">Back</button>
+      <button md-button class="md-primary md-raised" (click)="stepper.next()">Complete</button>
+      <button md-button class="md-primary" (click)="stepper.back()">Back</button>
     </ngx-step-actions>
   </ngx-step>
 ```
@@ -117,7 +117,8 @@ Used to control a stepper by it's id. Example:
 @ViewChild('stepperDemo')
 public steppers: NgxStepperComponent;
 
-public nextStep(): void {
+public selectCampaign(): void {
+  this.steppers.showFeedback('Checking, please wait ...');
   this.steppers.next();
 }
 ```

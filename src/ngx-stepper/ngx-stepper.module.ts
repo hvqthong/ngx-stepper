@@ -32,10 +32,6 @@ import {
   NgxStepActionsComponent
 } from './ngx-step-actions.component';
 
-import {
-  NgxStepperService
-} from './ngx-stepper.service';
-
 @NgModule({
   declarations: [
     NgxStepperComponent,
@@ -58,7 +54,6 @@ import {
     NgxStepBodyComponent,
     NgxStepActionsComponent
   ],
-  providers: [ NgxStepperService ],
   schemas: [ NO_ERRORS_SCHEMA ]
 })
 export class NgxStepperModule {

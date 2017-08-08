@@ -81,7 +81,9 @@ import {
     </div>
   `,
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./ngx-stepper.style.scss']
+  styleUrls: ['./ngx-stepper.style.scss'],
+  exportAs: 'stepper',
+  providers: [NgxStepperService]
 })
 export class NgxStepperComponent implements OnInit {
   @Input()
