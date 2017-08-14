@@ -75,7 +75,7 @@ export class AppModule { }
     </ngx-step-body>
     <ngx-step-actions>
       <button md-button class="md-primary md-raised" (click)="selectCampaign()">Continue</button>
-      <button md-button class="md-primary" (click)="stepper.back()">Cancel</button>
+      <button md-button class="md-primary" (click)="stepperDemo.back()">Cancel</button>
     </ngx-step-actions>
   </ngx-step>
   <ngx-step [label]="'Publish the ad'">
@@ -85,8 +85,8 @@ export class AppModule { }
         voluptatibus, eaque autem!</p>
     </ngx-step-body>
     <ngx-step-actions>
-      <button md-button class="md-primary md-raised" (click)="stepper.next()">Complete</button>
-      <button md-button class="md-primary" (click)="stepper.back()">Back</button>
+      <button md-button class="md-primary md-raised" (click)="stepperDemo.next()">Complete</button>
+      <button md-button class="md-primary" (click)="stepperDemo.back()">Back</button>
     </ngx-step-actions>
   </ngx-step>
 ```
