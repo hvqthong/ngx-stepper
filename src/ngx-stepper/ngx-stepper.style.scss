@@ -16,7 +16,7 @@ $swift-linear-duration: 0.08s;
 $swift-linear-timing-function: linear;
 $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
 
-.md-whiteframe-1dp, .md-whiteframe-z1 {
+.mat-whiteframe-1dp, .mat-whiteframe-z1 {
   box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
 }
 
@@ -25,25 +25,25 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
   height: 16px !important;
 }
 
-.md-stepper-error-indicator {
+.mat-stepper-error-indicator {
   height: 24px !important;
 }
 
-.md-stepper {
+.mat-stepper {
   display: block;
 }
 
-.md-steppers-header, .md-steppers-mobile-header, .md-step-actions {
+.mat-steppers-header, .mat-steppers-mobile-header, .mat-step-actions {
   flex: 0 0 auto;
   box-sizing: border-box;
 }
 
-.md-steppers-header-region {
+.mat-steppers-header-region {
   z-index: 1;
 }
 
 @media (max-width: 599px) {
-  .md-stepper {
+  .mat-stepper {
     display: flex;
     flex-direction: row;
     > div {
@@ -51,17 +51,17 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
       flex: 1;
     }
   }
-  .md-steppers-content {
+  .mat-steppers-content {
     min-height: 0;
     display: flex;
     flex-direction: column;
   }
-  .md-step.md-active {
+  .mat-step.mat-active {
     min-height: 0;
     flex: 1;
     display: flex;
     flex-direction: column;
-    .md-stepper {
+    .mat-stepper {
       display: flex;
       flex-direction: column;
       flex: 1;
@@ -69,26 +69,26 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
     }
   }
 
-  .md-steppers-scope {
+  .mat-steppers-scope {
     flex: 1;
   }
-  .md-step-body {
+  .mat-step-body {
     flex: 1;
   }
 }
 
-.md-steppers {
+.mat-steppers {
   display: flex;
   flex-flow: column;
 
-  &:not(.md-steppers-linear) {
-    .md-stepper-indicator {
-      &:not(.md-active):not(.md-completed):hover,
-      &.md-editable.md-completed:hover {
+  &:not(.mat-steppers-linear) {
+    .mat-stepper-indicator {
+      &:not(.mat-active):not(.mat-completed):hover,
+      &.mat-editable.mat-completed:hover {
         cursor: pointer;
 
         &,
-        .md-stepper-indicator-wrapper {
+        .mat-stepper-indicator-wrapper {
           background-color: #F6F6F6;
         }
       }
@@ -96,7 +96,7 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
   }
 }
 
-.md-steppers-header {
+.mat-steppers-header {
   margin: 0;
   display: flex;
   flex-flow: row nowrap;
@@ -104,12 +104,12 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
   align-items: flex-start;
 }
 
-.md-steppers-horizontal {
-  .md-stepper-indicator {
+.mat-steppers-horizontal {
+  .mat-stepper-indicator {
     min-height: 72px;
 
     &:first-child {
-      .md-stepper-indicator-wrapper {
+      .mat-stepper-indicator-wrapper {
         padding-left: 16px;
       }
     }
@@ -128,7 +128,7 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
   }
 }
 
-.md-stepper-indicator {
+.mat-stepper-indicator {
   margin: 0;
   padding: 0 16px;
   position: relative;
@@ -146,26 +146,26 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
     outline: none;
   }
 
-  &.md-completed,
-  &.md-active {
-    .md-stepper-number {
+  &.mat-completed,
+  &.mat-active {
+    .mat-stepper-number {
       background-color: #2196F3;
     }
 
-    .md-stepper-title {
+    .mat-stepper-title {
       color: rgba(0, 0, 0, .87);
     }
   }
 
-  &.md-active,
-  &.md-editable {
-    .md-stepper-title {
+  &.mat-active,
+  &.mat-editable {
+    .mat-stepper-title {
       font-weight: 500;
     }
   }
 
-  &.md-error {
-    .md-stepper-title {
+  &.mat-error {
+    .mat-stepper-title {
       color: $color-step-error;
     }
   }
@@ -173,7 +173,7 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
   &:first-child {
     padding-left: 0;
 
-    // .md-stepper-indicator-wrapper {
+    // .mat-stepper-indicator-wrapper {
     //   padding-left: 16px;
     // }
   }
@@ -182,17 +182,17 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
     padding-right: 0;
     justify-content: flex-end;
 
-    .md-stepper-indicator-wrapper {
+    .mat-stepper-indicator-wrapper {
       padding-right: 24px;
     }
   }
 
-  .md-ripple-container {
+  .mat-ripple-container {
     z-index: 3;
   }
 }
 
-.md-stepper-indicator-wrapper {
+.mat-stepper-indicator-wrapper {
   padding: 0 8px 0 0;
   position: relative;
   z-index: 2;
@@ -203,7 +203,7 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
   transition: $swift-ease-out;
 }
 
-.md-stepper-number {
+.mat-stepper-number {
   $size: 24px;
 
   width: $size;
@@ -222,27 +222,27 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
   }
 }
 
-.md-error {
-  .md-stepper-error-indicator {
+.mat-error {
+  .mat-stepper-error-indicator {
     margin: 0 8px;
     background-color: #fff;
 
-    md-icon {
+    mat-icon {
       color: $color-step-error;
     }
   }
 
-  .md-stepper-error-message {
+  .mat-stepper-error-message {
     color: $color-step-error;
     font-weight: 400;
   }
 }
 
-.md-stepper-done {
+.mat-stepper-done {
   background-color: #5cb85c !important;
 }
 
-.md-stepper-icon {
+.mat-stepper-icon {
   $size: 18px;
 
   width: $size;
@@ -253,7 +253,7 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
   font-size: $size;
   font-weight: 700;
 
-  &.md-stepper-icon-edit {
+  &.mat-stepper-icon-edit {
     $size: 14px;
 
     width: $size;
@@ -263,7 +263,7 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
   }
 }
 
-.md-stepper-title {
+.mat-stepper-title {
   display: flex;
   flex-flow: column nowrap;
   position: relative;
@@ -272,17 +272,17 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
   line-height: 24px;
 }
 
-.md-steppers-content {
+.mat-steppers-content {
   position: relative;
   //overflow: hidden;
   flex: 1;
 }
 
-// md-stepper {
+// mat-stepper {
 //   display: block;
 // }
 
-.md-stepper {
+.mat-stepper {
   box-sizing: border-box;
   //position: absolute;
   // top: 0;
@@ -292,26 +292,26 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
   // opacity: 0;
   //transition: .4s cubic-bezier(.35, 0, .25, 1);
 
-  &.md-active {
+  &.mat-active {
     position: relative;
     pointer-events: auto;
     // opacity: 1;
   }
 }
 
-.md-steppers-actions {
+.mat-steppers-actions {
   display: flex;
 }
 
 // --------------------------------------------------
 // OPTIONAL
 
-.md-stepper-optional {
-  .md-stepper-title {
+.mat-stepper-optional {
+  .mat-stepper-title {
     text-align: left;
     white-space: nowrap;
 
-    small:not(.md-stepper-error-message) {
+    small:not(.mat-stepper-error-message) {
       color: rgba(0, 0, 0, .54);
     }
 
@@ -326,19 +326,19 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
 // --------------------------------------------------
 // LINEAR
 
-.md-steppers-linear {
-  .md-stepper-indicator {
+.mat-steppers-linear {
+  .mat-stepper-indicator {
     cursor: default;
 
-    &.md-editable.md-completed:hover {
+    &.mat-editable.mat-completed:hover {
       cursor: pointer;
 
       &,
-      .md-stepper-indicator-wrapper {
+      .mat-stepper-indicator-wrapper {
         background-color: #F6F6F6;
       }
 
-      .md-stepper-number {
+      .mat-stepper-number {
         &:before,
         &:after {
           background-color: #F6F6F6;
@@ -347,10 +347,10 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
     }
   }
 
-  .md-stepper-title {
+  .mat-stepper-title {
     color: rgba(0, 0, 0, .26);
 
-    small:not(.md-stepper-error-message) {
+    small:not(.mat-stepper-error-message) {
       color: rgba(0, 0, 0, .26);
     }
   }
@@ -359,14 +359,14 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
 // --------------------------------------------------
 // ALTERNATIVE
 
-.md-steppers-alternative {
-  &:not(.md-steppers-linear) {
-    .md-stepper-indicator:not(.md-active):not(.md-completed):hover {
-      .md-stepper-indicator-wrapper {
+.mat-steppers-alternative {
+  &:not(.mat-steppers-linear) {
+    .mat-stepper-indicator:not(.mat-active):not(.mat-completed):hover {
+      .mat-stepper-indicator-wrapper {
         background: none;
       }
 
-      .md-stepper-number {
+      .mat-stepper-number {
         &:before,
         &:after {
           background-color: #F6F6F6;
@@ -375,14 +375,14 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
     }
   }
 
-  .md-steppers-horizontal {
-    .md-stepper-indicator {
+  .mat-steppers-horizontal {
+    .mat-stepper-indicator {
       min-height: 104px;
       padding: 24px 16px;
       flex: 1;
       justify-content: center;
 
-      .md-stepper-indicator-wrapper {
+      .mat-stepper-indicator-wrapper {
         padding: 0;
       }
 
@@ -409,15 +409,15 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
       }
     }
 
-    .md-stepper-indicator-wrapper {
+    .mat-stepper-indicator-wrapper {
       padding: 0 16px;
       min-height: 50px;
       flex-flow: column nowrap;
       background: none;
     }
 
-    .md-stepper-number,
-    .md-stepper-error-indicator {
+    .mat-stepper-number,
+    .mat-stepper-error-indicator {
       position: relative;
 
       &:before,
@@ -440,7 +440,7 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
       }
     }
 
-    .md-stepper-title {
+    .mat-stepper-title {
       margin-top: 16px;
       line-height: 18px;
       text-align: center;
@@ -453,8 +453,8 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
 
 // ------------------------------------------------
 // HORIZONTAL
-.md-steppers:not(.md-steppers-vertical) {
-  .md-steppers-header.md-steppers-vertical {
+.mat-steppers:not(.mat-steppers-vertical) {
+  .mat-steppers-header.mat-steppers-vertical {
     display: none;
   }
 }
@@ -462,52 +462,52 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
 // ------------------------------------------------
 // VERTICAL
 
-.md-steppers-vertical {
+.mat-steppers-vertical {
 
-  .md-stepper {
+  .mat-stepper {
     padding: 8px 24px;
   }
 
-  .md-steppers-scope {
+  .mat-steppers-scope {
     //display: block;
     margin-left: 20px;
     border-left: 1px solid #E8E8E8;
     padding-left: 20px;
   }
 
-  .md-steppers-header.md-steppers-horizontal {
+  .mat-steppers-header.mat-steppers-horizontal {
     display: none;
   }
 }
 
 // ------------------------------------------------
 // MOBILE-STEP-TEXT
-.md-steppers-mobile-header, .md-stepper-feedback-message {
+.mat-steppers-mobile-header, .mat-stepper-feedback-message {
   display: none;
 }
 
 @media (max-width: 599px) {
 
-  .md-steppers-mobile-step-text:not(.md-steppers-vertical) {
-    .md-stepper {
+  .mat-steppers-mobile-step-text:not(.mat-steppers-vertical) {
+    .mat-stepper {
       padding: 0;
     }
-    // md-step-body {
+    // mat-step-body {
     //   padding: 24px;
     // }
 
-    .md-steppers-mobile-header {
+    .mat-steppers-mobile-header {
       display: block;
     }
-    .md-stepper-feedback-message {
+    .mat-stepper-feedback-message {
       display: flex;
     }
 
-    .md-steppers-header.md-steppers-horizontal {
+    .mat-steppers-header.mat-steppers-horizontal {
       display: none;
     }
 
-    .md-step-actions {
+    .mat-step-actions {
       background: #f6f6f6 !important;
       color: #202020 !important;
       flex-direction: row;
@@ -524,11 +524,11 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
 // ------------------------------------------------
 // Feedback
 
-.md-steppers-header-region {
+.mat-steppers-header-region {
   position: relative;
 }
 
-.md-stepper-feedback-message {
+.mat-stepper-feedback-message {
   position: absolute;
   top: 0;
   left: 0;
@@ -542,11 +542,11 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
   box-sizing: border-box;
 }
 
-.md-steppers {
+.mat-steppers {
   position: relative;
 }
 
-.md-step-body {
+.mat-step-body {
   position: relative;
   //   padding: 24px;
   overflow: auto;
@@ -554,15 +554,15 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
   flex-direction: column;
 }
 
-.md-step-body-loading {
+.mat-step-body-loading {
   display: none;
 }
 
-.md-steppers-has-feedback {
-  .md-stepper-feedback-message {
+.mat-steppers-has-feedback {
+  .mat-stepper-feedback-message {
     display: flex;
   }
-  .md-steppers-overlay {
+  .mat-steppers-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -570,7 +570,7 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
     width: 100%;
     z-index: 10;
   }
-  .md-step-body-overlay {
+  .mat-step-body-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -580,7 +580,7 @@ $swift-linear: all $swift-linear-duration $swift-linear-timing-function;
     opacity: 0.75;
     background-color: white;
   }
-  .md-step-body-loading {
+  .mat-step-body-loading {
     display: flex;
     position: absolute;
     top: 0;

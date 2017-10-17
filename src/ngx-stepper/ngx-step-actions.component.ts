@@ -6,7 +6,7 @@ import {
 @Component({
   selector: 'ngx-step-actions',
   template: `
-    <div class="md-step-actions">
+    <div class="mat-step-actions">
       <ng-content></ng-content>
     </div>
   `

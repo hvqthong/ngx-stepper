@@ -8,12 +8,12 @@ import {
 } from '@angular/common';
 
 import {
-  MdInputModule,
-  MdRippleModule,
-  MdButtonModule,
-  MdIconModule,
-  MdDialogModule,
-  MdToolbarModule
+  MatInputModule,
+  MatButtonModule,
+  MatIconModule,
+  MatDialogModule,
+  MatRippleModule,
+  MatToolbarModule
 } from '@angular/material';
 
 import {
@@ -41,12 +41,12 @@ import {
   ],
   imports: [
     CommonModule,
-    MdInputModule,
-    MdRippleModule,
-    MdButtonModule,
-    MdIconModule,
-    MdDialogModule,
-    MdToolbarModule
+    MatInputModule,
+    MatRippleModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDialogModule,
+    MatToolbarModule
   ],
   exports: [
     NgxStepperComponent,
