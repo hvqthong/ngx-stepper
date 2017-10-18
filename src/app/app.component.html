@@ -1,12 +1,12 @@
 <div class="toggle-options">
-  <button md-button class="md-primary md-raised-button" (click)="toggleMobileStepText()">Toggle MobileStepText</button>
-  <button md-button class="md-primary md-raised" (click)="toggleVertical()">Toggle Vertical</button>
-  <button md-button class="md-primary md-raised" (click)="toggleLinear()">Toggle Linear</button>
-  <button md-button class="md-primary md-raised" (click)="toggleAlternative()">Toggle Alternative</button>
-  <button md-button class="md-primary md-raised" (click)="showError()">Show error</button>
-  <button md-button class="md-primary md-raised" (click)="clearError()">Clear error</button>
-  <button md-button class="md-primary md-raised" (click)="showFeedback()">Show Feedback</button>
-  <button md-button class="md-primary md-raised" (click)="clearFeedback()">Clear Feedback</button>
+  <button mat-button class="mat-primary mat-raised-button" (click)="toggleMobileStepText()">Toggle MobileStepText</button>
+  <button mat-button class="mat-primary mat-raised" (click)="toggleVertical()">Toggle Vertical</button>
+  <button mat-button class="mat-primary mat-raised" (click)="toggleLinear()">Toggle Linear</button>
+  <button mat-button class="mat-primary mat-raised" (click)="toggleAlternative()">Toggle Alternative</button>
+  <button mat-button class="mat-primary mat-raised" (click)="showError()">Show error</button>
+  <button mat-button class="mat-primary mat-raised" (click)="clearError()">Clear error</button>
+  <button mat-button class="mat-primary mat-raised" (click)="showFeedback()">Show Feedback</button>
+  <button mat-button class="mat-primary mat-raised" (click)="clearFeedback()">Clear Feedback</button>
 </div>
 <ngx-stepper #stepperDemo="stepper" [options]="options">
   <ngx-step [label]="'Select a campaign'">
@@ -25,8 +25,8 @@
         voluptatibus, eaque autem!</p>
     </ngx-step-body>
     <ngx-step-actions>
-      <button md-button class="md-primary md-raised" (click)="selectCampaign()">Continue</button>
-      <button md-button class="md-primary" (click)="stepperDemo.back()">Cancel</button>
+      <button mat-button class="mat-primary mat-raised" (click)="selectCampaign()">Continue</button>
+      <button mat-button class="mat-primary" (click)="stepperDemo.back()">Cancel</button>
     </ngx-step-actions>
   </ngx-step>
   <ngx-step [label]="'Create an group'">
@@ -39,8 +39,8 @@
         voluptatibus, eaque autem!</p>
     </ngx-step-body>
     <ngx-step-actions>
-      <button md-button class="md-primary md-raised" (click)="stepperDemo.next()">Continue</button>
-      <button md-button class="md-primary" (click)="stepperDemo.back()">Back</button>
+      <button mat-button class="mat-primary mat-raised" (click)="stepperDemo.next()">Continue</button>
+      <button mat-button class="mat-primary" (click)="stepperDemo.back()">Back</button>
     </ngx-step-actions>
   </ngx-step>
   <ngx-step [label]="'Create an ad'">
@@ -74,8 +74,8 @@
         voluptatibus, eaque autem!</p>
     </ngx-step-body>
     <ngx-step-actions>
-      <button md-button class="md-primary md-raised" (click)="stepperDemo.next()">Continue</button>
-      <button md-button class="md-primary" (click)="stepperDemo.back()">Back</button>
+      <button mat-button class="mat-primary mat-raised" (click)="stepperDemo.next()">Continue</button>
+      <button mat-button class="mat-primary" (click)="stepperDemo.back()">Back</button>
     </ngx-step-actions>
   </ngx-step>
   <ngx-step [label]="'Publish the ad'">
@@ -85,8 +85,8 @@
         voluptatibus, eaque autem!</p>
     </ngx-step-body>
     <ngx-step-actions>
-      <button md-button class="md-primary md-raised" (click)="stepperDemo.next()">Complete</button>
-      <button md-button class="md-primary" (click)="stepperDemo.back()">Back</button>
+      <button mat-button class="mat-primary mat-raised" (click)="stepperDemo.next()">Complete</button>
+      <button mat-button class="mat-primary" (click)="stepperDemo.back()">Back</button>
     </ngx-step-actions>
   </ngx-step>
 </ngx-stepper>

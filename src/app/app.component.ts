@@ -9,7 +9,7 @@ import {
 } from '@angular/platform-browser';
 
 import {
-  MdIconRegistry
+  MatIconRegistry
 } from '@angular/material';
 
 import {
@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
   };
   public campaign = false;
 
-  constructor(private _iconRegistry: MdIconRegistry,
+  constructor(private _iconRegistry: MatIconRegistry,
               private _sanitizer: DomSanitizer) {
     // empty
   }

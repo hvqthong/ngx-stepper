@@ -16,45 +16,45 @@ import {
 @Component({
   selector: 'ngx-step',
   template: `
-    <div class="md-step" [ngClass]="{ 'md-active': isActive() }">
-      <div class="md-stepper" [ngClass]="{ 'md-active': isActive() }">
-        <div class="md-steppers-header md-steppers-vertical">
-          <button class="md-stepper-indicator"
-                  [ngClass]="{'md-active': stepNumber === stepper.currentStep,
-                              'md-completed': stepper.isCompleted(stepNumber),
-                              'md-error': hasError,
-                              'md-stepper-optional': optional || hasError}"
+    <div class="mat-step" [ngClass]="{ 'mat-active': isActive() }">
+      <div class="mat-stepper" [ngClass]="{ 'mat-active': isActive() }">
+        <div class="mat-steppers-header mat-steppers-vertical">
+          <button class="mat-stepper-indicator"
+                  [ngClass]="{'mat-active': stepNumber === stepper.currentStep,
+                              'mat-completed': stepper.isCompleted(stepNumber),
+                              'mat-error': hasError,
+                              'mat-stepper-optional': optional || hasError}"
                   (click)="stepper.goto(stepNumber)"
                   [disabled]="stepper.options.linear || stepNumber === stepper.currentStep">
-            <div class="md-stepper-indicator-wrapper">
-              <div class="md-stepper-number" *ngIf="!hasError"
-                   [ngClass]="{'md-stepper-done': stepper.isCompleted(stepNumber)}">
+            <div class="mat-stepper-indicator-wrapper">
+              <div class="mat-stepper-number" *ngIf="!hasError"
+                   [ngClass]="{'mat-stepper-done': stepper.isCompleted(stepNumber)}">
                 <span *ngIf="!stepper.isCompleted(stepNumber)">{{ stepNumber + 1 }}</span>
-                <md-icon class="md-stepper-icon svg-icon" svgIcon="step-done"
-                         *ngIf="stepper.isCompleted(stepNumber) && stepper.options.enableSvgIcon"></md-icon>
-                <md-icon class="md-stepper-icon"
-                         *ngIf="stepper.isCompleted(stepNumber) && !stepper.options.enableSvgIcon">done</md-icon>
+                <mat-icon class="mat-stepper-icon svg-icon" svgIcon="step-done"
+                         *ngIf="stepper.isCompleted(stepNumber) && stepper.options.enableSvgIcon"></mat-icon>
+                <mat-icon class="mat-stepper-icon"
+                         *ngIf="stepper.isCompleted(stepNumber) && !stepper.options.enableSvgIcon">done</mat-icon>
               </div>
-              <div class="md-stepper-error-indicator" *ngIf="hasError">
-                <md-icon *ngIf="stepper.options.enableSvgIcon" svgIcon="step-warning"></md-icon>
-                <md-icon *ngIf="!stepper.options.enableSvgIcon">warning</md-icon>
+              <div class="mat-stepper-error-indicator" *ngIf="hasError">
+                <mat-icon *ngIf="stepper.options.enableSvgIcon" svgIcon="step-warning"></mat-icon>
+                <mat-icon *ngIf="!stepper.options.enableSvgIcon">warning</mat-icon>
               </div>
 
-              <div class="md-stepper-title">
+              <div class="mat-stepper-title">
                 <span>{{ label }}</span>
                 <small *ngIf="optional && !hasError">{{ optional }}</small>
-                <small class="md-stepper-error-message" *ngIf="hasError">
+                <small class="mat-stepper-error-message" *ngIf="hasError">
                   {{ message }}
                 </small>
               </div>
             </div>
           </button>
           <div [hidden]="!stepper.hasFeedback"></div>
-          <!--<div class="md-stepper-feedback-message" [hidden]="!stepper.hasFeedback">-->
+          <!--<div class="mat-stepper-feedback-message" [hidden]="!stepper.hasFeedback">-->
           <!--{{stepper.feedbackMessage}}-->
           <!--</div>-->
         </div>
-        <div class="md-steppers-scope" [hidden]="!isActive()">
+        <div class="mat-steppers-scope" [hidden]="!isActive()">
           <ng-content select="ngx-step-body"></ng-content>
           <ng-content select="ngx-step-actions"></ng-content>
         </div>

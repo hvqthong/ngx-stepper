@@ -9,7 +9,7 @@ Based on Material Steppers: https://www.google.com/design/spec/components/steppe
 [http://embed.plnkr.co/n1Ye3pQY6dlMSoJizO6Y/](http://embed.plnkr.co/n1Ye3pQY6dlMSoJizO6Y/)
 
 ## Run Demo App
-You can try out the Angular Steppers in the demo app built with [Angular-CLI](https://github.com/angular/angular-cli). 
+You can try out the Angular Steppers in the demo app built with [Angular-CLI](https://github.com/angular/angular-cli).
 
 ### #1 To start the demo app clone or download the repo.
 ### #2 Install the latest version of Angular-CLI
@@ -74,8 +74,8 @@ export class AppModule { }
         voluptatibus, eaque autem!</p>
     </ngx-step-body>
     <ngx-step-actions>
-      <button md-button class="md-primary md-raised" (click)="selectCampaign()">Continue</button>
-      <button md-button class="md-primary" (click)="stepperDemo.back()">Cancel</button>
+      <button mat-button class="mat-primary mat-raised" (click)="selectCampaign()">Continue</button>
+      <button mat-button class="mat-primary" (click)="stepperDemo.back()">Cancel</button>
     </ngx-step-actions>
   </ngx-step>
   <ngx-step [label]="'Publish the ad'">
@@ -85,8 +85,8 @@ export class AppModule { }
         voluptatibus, eaque autem!</p>
     </ngx-step-body>
     <ngx-step-actions>
-      <button md-button class="md-primary md-raised" (click)="stepperDemo.next()">Complete</button>
-      <button md-button class="md-primary" (click)="stepperDemo.back()">Back</button>
+      <button mat-button class="mat-primary mat-raised" (click)="stepperDemo.next()">Complete</button>
+      <button mat-button class="mat-primary" (click)="stepperDemo.back()">Back</button>
     </ngx-step-actions>
   </ngx-step>
 ```
@@ -127,7 +127,7 @@ Detailed service operations bellow:
 
 | Method | Description | Returns |
 | --- | --- | --- |
-| `next()` | Complete the current step and move one to the next. Using this method on editable steps (in linear stepper) it will search by the next step without "completed" state to move. When invoked it dispatch the event onstepcomplete to the step element. | boolean - True if move and false if not move (e.g. On the last step) | 
+| `next()` | Complete the current step and move one to the next. Using this method on editable steps (in linear stepper) it will search by the next step without "completed" state to move. When invoked it dispatch the event onstepcomplete to the step element. | boolean - True if move and false if not move (e.g. On the last step) |
 | `back()` | Move to the previous step without change the state of current step. Using this method in linear stepper it will check if previous step is editable to move. | boolean - True if move and false if not move (e.g. On the first step) |
 | `skip()` | Move to the next step without change the state of current step. This method works only in optional steps. | boolean - True if move and false if not move (e.g. On non-optional step) |
 | `goto(stepNumber: number)` | Move "active" to specified step id parameter. The id used as reference is the integer number shown on the label of each step (e.g. 2). | boolean - True if move and false if not move (e.g. On id not found) |
@@ -140,13 +140,13 @@ Detailed service operations bellow:
 - Supported Namespace: 'step-done', 'step-warning'
 ```ts
 import {DomSanitizer} from '@angular/platform-browser';
-import {MdIconRegistry} from '@angular/material';
+import {MatIconRegistry} from '@angular/material';
 
 public options: StepperOptions = {
   enableSvgIcon: true
 };
-  
-constructor(private _iconRegistry: MdIconRegistry,private _sanitizer: DomSanitizer) {}
+
+constructor(private _iconRegistry: MatIconRegistry,private _sanitizer: DomSanitizer) {}
 
 public ngOnInit(): void {
   this._iconRegistry
@@ -180,7 +180,7 @@ public ngOnInit(): void {
 - Based on:
  - [Material Steppers](https://github.com/eberlitz/material-steppers)
  - [MDL Stepper](https://github.com/ahlechandre/mdl-stepper)
- - [MD Steppers](https://github.com/ipiz/md-steppers)
+ - [MD Steppers](https://github.com/ipiz/mat-steppers)
  - [Angular Material Steppers](https://github.com/marcosmoura/angular-material-steppers)
 
 - Thanks to all ;)

@@ -4,9 +4,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {
-  MdRippleModule,
-  MdButtonModule,
-  MdIconModule
+  MatRippleModule,
+  MatButtonModule,
+  MatIconModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -21,9 +21,9 @@ import { NgxStepperModule } from '../ngx-stepper';
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
-    MdRippleModule,
-    MdButtonModule,
-    MdIconModule,
+    MatRippleModule,
+    MatButtonModule,
+    MatIconModule,
     NgxStepperModule
   ],
   providers: [],
