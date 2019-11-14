@@ -106,6 +106,9 @@ export class NgxStepperComponent implements OnInit {
   constructor(private _ngxStepperService: NgxStepperService) {
     this._ngxStepperService.isInitStepCmp.subscribe((step: NgxStepComponent) => {
       step.stepNumber = this.addStep(step);
+      if (!step.stepper) {
+        step.stepper = this;
+      }
     });
   }
 
