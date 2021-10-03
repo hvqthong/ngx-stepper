@@ -8,13 +8,23 @@ import {
 } from '@angular/common';
 
 import {
-  MatInputModule,
-  MatButtonModule,
-  MatIconModule,
-  MatDialogModule,
-  MatRippleModule,
+  MatInputModule
+} from '@angular/material/input';
+import {
+  MatButtonModule
+} from '@angular/material/button';
+import {
+  MatIconModule
+} from '@angular/material/icon';
+import {
+  MatDialogModule
+} from '@angular/material/dialog';
+import {
+  MatRippleModule
+} from '@angular/material/core';
+import {
   MatToolbarModule
-} from '@angular/material';
+} from '@angular/material/toolbar';
 
 import {
   NgxStepperComponent
